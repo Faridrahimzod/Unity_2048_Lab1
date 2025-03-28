@@ -1,18 +1,15 @@
 using UnityEngine;
-using System; // Для работы с событиями (Action)
+using System;
 
-// Класс НЕ наследует MonoBehaviour (это data-класс)
 [Serializable]
 public class Cell
 {
-    // События
-    public event Action<int> OnValueChanged; // Передает новое значение
-    public event Action<Vector2Int> OnPositionChanged; // Передает новую позицию
+    public event Action<int> OnValueChanged; 
+    public event Action<Vector2Int> OnPositionChanged; 
 
     [SerializeField] private int _value;
     [SerializeField] private Vector2Int _position;
 
-    // Свойство для значения клетки
     public int Value
     {
         get => _value;
@@ -21,12 +18,11 @@ public class Cell
             if (_value != value)
             {
                 _value = value;
-                OnValueChanged?.Invoke(_value); // Вызываем событие
+                OnValueChanged?.Invoke(_value); 
             }
         }
     }
 
-    // Свойство для позиции клетки
     public Vector2Int Position
     {
         get => _position;
@@ -35,12 +31,11 @@ public class Cell
             if (_position != value)
             {
                 _position = value;
-                OnPositionChanged?.Invoke(_position); // Вызываем событие
+                OnPositionChanged?.Invoke(_position); 
             }
         }
     }
 
-    // Конструктор для инициализации
     public Cell(Vector2Int position, int value = 0)
     {
         _position = position;
