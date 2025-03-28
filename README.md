@@ -28,4 +28,4 @@ Assets/
 
 ## Пример игрового поля
 
-![GamePlay Screenshot] (Assets/Prefab/2048-1.png)
+![Gameplay Screenshot](Assets/Prefab/2048-1.png) 
