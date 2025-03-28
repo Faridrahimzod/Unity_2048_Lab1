@@ -25,3 +25,7 @@ Assets/
 └── Scenes/
     └── MainScene.unity      # Основная сцена
 ```
+
+## Пример игрового поля
+
+![GamePlay Screenshot] (Assets/Prefab/2048-1.png)
